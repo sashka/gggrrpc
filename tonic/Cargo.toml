@@ -1,0 +1,18 @@
+[package]
+name = "gggrrpc-tonic"
+version = "0.1.0"
+authors = ["Alexander Saltanov <asd@mokote.com>"]
+edition = "2018"
+
+[dependencies]
+num_cpus = "1"
+prost = "0.6"
+tokio = { version = "0.2", features = ["full"] }
+tonic = { version = "0.3", features = ["tls"]}
+
+[build-dependencies]
+tonic-build = "0.3"
+
+[[bin]]
+name = "hello-server"
+path = "src/server.rs"

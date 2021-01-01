@@ -1,0 +1,21 @@
+[package]
+name = "gggrrpc-grpcio"
+version = "0.1.0"
+authors = ["Alexander Saltanov <asd@mokote.com>"]
+edition = "2018"
+
+[dependencies]
+grpcio = { version = "0.7", default-features = false, features = ["secure", "protobuf-codec"] }
+num_cpus = "1"
+smol = "1.2.5"
+protobuf = "2.18.1"
+futures = "0.3"
+ctrlc = "3.1"
+async-channel = "1.5"
+
+[build-dependencies]
+protoc-grpcio = "2.0.0"
+
+[[bin]]
+name = "hello-server"
+path = "src/server.rs"
